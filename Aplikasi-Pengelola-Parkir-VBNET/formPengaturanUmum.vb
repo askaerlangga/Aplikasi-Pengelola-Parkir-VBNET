@@ -4,7 +4,7 @@ Public Class formPengaturanUmum
 
     Sub loadDataPengaturanUmum()
         koneksi()
-        cmd = New OdbcCommand("select * from tabelPengaturanUmum where id_pengaturan = '" & "0" & "'", conn)
+        cmd = New OdbcCommand("select * from tabelPengaturanUmum where id_pengaturan = '" & "1" & "'", conn)
         dr = cmd.ExecuteReader
         dr.Read()
         txtNamaParkiran.Text = dr("nama_parkiran")
