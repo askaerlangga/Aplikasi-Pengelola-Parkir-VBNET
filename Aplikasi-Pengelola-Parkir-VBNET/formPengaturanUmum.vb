@@ -15,7 +15,7 @@ Public Class formPengaturanUmum
 
     Private Sub btnSimpan_Click(sender As Object, e As EventArgs) Handles btnSimpan.Click
         koneksi()
-        str = "update tabelPengaturanUmum set nama_parkiran = '" & txtNamaParkiran.Text & "', nama_pemilik = '" & txtNamaPemilik.Text & "', alamat_parkiran = '" & txtAlamatParkiran.Text & "', no_telp_parkiran = '" & txtNoTelpParkiran.Text & "' where id_pengaturan = '" & "0" & "'"
+        str = "update tabelPengaturanUmum set nama_parkiran = '" & txtNamaParkiran.Text & "', nama_pemilik = '" & txtNamaPemilik.Text & "', alamat_parkiran = '" & txtAlamatParkiran.Text & "', no_telp_parkiran = '" & txtNoTelpParkiran.Text & "' where id_pengaturan = '" & "1" & "'"
         cmd = New OdbcCommand(str, conn)
         cmd.ExecuteNonQuery()
         MessageBox.Show("Data Tersimpan!")
