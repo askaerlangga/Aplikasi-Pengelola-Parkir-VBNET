@@ -13,7 +13,7 @@ Public Class formUtama
 
     Sub loadNamaParkiran()
         koneksi()
-        cmd = New OdbcCommand("select * from tabelPengaturanUmum where id_pengaturan = '" & "0" & "'", conn)
+        cmd = New OdbcCommand("select * from tabelPengaturanUmum where id_pengaturan = '" & "1" & "'", conn)
         dr = cmd.ExecuteReader
         dr.Read()
         lblNamaParkiran.Text = dr("nama_parkiran")
@@ -45,6 +45,7 @@ Public Class formUtama
     End Sub
 
     Private Sub formUtama_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        loadNamaParkiran()
         formBeranda.AutoSize = False
         formBeranda.TopLevel = False
         formBeranda.Dock = DockStyle.Fill

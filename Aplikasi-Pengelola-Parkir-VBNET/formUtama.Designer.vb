@@ -26,25 +26,25 @@ Partial Class formUtama
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(formUtama))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TableLayoutPanel14 = New System.Windows.Forms.TableLayoutPanel()
-        Me.lblNamaParkiran = New System.Windows.Forms.Label()
-        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
-        Me.lblNamaUser = New System.Windows.Forms.Label()
-        Me.panelUtama = New System.Windows.Forms.Panel()
-        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.btnTransaksi = New System.Windows.Forms.Button()
         Me.btnPengaturan = New System.Windows.Forms.Button()
         Me.btnBeranda = New System.Windows.Forms.Button()
         Me.btnTentang = New System.Windows.Forms.Button()
+        Me.TableLayoutPanel14 = New System.Windows.Forms.TableLayoutPanel()
+        Me.lblNamaParkiran = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
+        Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
+        Me.lblNamaUser = New System.Windows.Forms.Label()
         Me.btnLogout = New System.Windows.Forms.Button()
+        Me.panelUtama = New System.Windows.Forms.Panel()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel14.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel3.SuspendLayout()
         Me.TableLayoutPanel4.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TableLayoutPanel1
@@ -87,90 +87,6 @@ Partial Class formUtama
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel2.Size = New System.Drawing.Size(200, 624)
         Me.TableLayoutPanel2.TabIndex = 1
-        '
-        'TableLayoutPanel14
-        '
-        Me.TableLayoutPanel14.ColumnCount = 1
-        Me.TableLayoutPanel14.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel14.Controls.Add(Me.lblNamaParkiran, 0, 1)
-        Me.TableLayoutPanel14.Controls.Add(Me.PictureBox2, 0, 0)
-        Me.TableLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel14.Location = New System.Drawing.Point(3, 3)
-        Me.TableLayoutPanel14.Name = "TableLayoutPanel14"
-        Me.TableLayoutPanel14.RowCount = 2
-        Me.TableLayoutPanel14.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel14.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel14.Size = New System.Drawing.Size(194, 144)
-        Me.TableLayoutPanel14.TabIndex = 4
-        '
-        'lblNamaParkiran
-        '
-        Me.lblNamaParkiran.AutoSize = True
-        Me.lblNamaParkiran.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lblNamaParkiran.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNamaParkiran.ForeColor = System.Drawing.SystemColors.Control
-        Me.lblNamaParkiran.Location = New System.Drawing.Point(0, 72)
-        Me.lblNamaParkiran.Margin = New System.Windows.Forms.Padding(0, 0, 3, 0)
-        Me.lblNamaParkiran.Name = "lblNamaParkiran"
-        Me.lblNamaParkiran.Size = New System.Drawing.Size(191, 72)
-        Me.lblNamaParkiran.TabIndex = 2
-        Me.lblNamaParkiran.Text = "Aska Parking"
-        Me.lblNamaParkiran.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
-        'TableLayoutPanel3
-        '
-        Me.TableLayoutPanel3.BackColor = System.Drawing.SystemColors.Control
-        Me.TableLayoutPanel3.ColumnCount = 1
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel3.Controls.Add(Me.TableLayoutPanel4, 0, 0)
-        Me.TableLayoutPanel3.Controls.Add(Me.panelUtama, 0, 1)
-        Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(200, 0)
-        Me.TableLayoutPanel3.Margin = New System.Windows.Forms.Padding(0)
-        Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
-        Me.TableLayoutPanel3.RowCount = 2
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50.0!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(980, 624)
-        Me.TableLayoutPanel3.TabIndex = 2
-        '
-        'TableLayoutPanel4
-        '
-        Me.TableLayoutPanel4.BackColor = System.Drawing.SystemColors.Control
-        Me.TableLayoutPanel4.ColumnCount = 3
-        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150.0!))
-        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50.0!))
-        Me.TableLayoutPanel4.Controls.Add(Me.lblNamaUser, 1, 0)
-        Me.TableLayoutPanel4.Controls.Add(Me.btnLogout, 2, 0)
-        Me.TableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel4.Location = New System.Drawing.Point(20, 10)
-        Me.TableLayoutPanel4.Margin = New System.Windows.Forms.Padding(20, 10, 20, 0)
-        Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
-        Me.TableLayoutPanel4.RowCount = 1
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel4.Size = New System.Drawing.Size(940, 40)
-        Me.TableLayoutPanel4.TabIndex = 1
-        '
-        'lblNamaUser
-        '
-        Me.lblNamaUser.AutoSize = True
-        Me.lblNamaUser.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lblNamaUser.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lblNamaUser.Location = New System.Drawing.Point(743, 0)
-        Me.lblNamaUser.Name = "lblNamaUser"
-        Me.lblNamaUser.Size = New System.Drawing.Size(144, 40)
-        Me.lblNamaUser.TabIndex = 1
-        Me.lblNamaUser.Text = "Nama User"
-        Me.lblNamaUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'panelUtama
-        '
-        Me.panelUtama.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.panelUtama.Location = New System.Drawing.Point(3, 53)
-        Me.panelUtama.Name = "panelUtama"
-        Me.panelUtama.Size = New System.Drawing.Size(974, 568)
-        Me.panelUtama.TabIndex = 2
         '
         'btnTransaksi
         '
@@ -248,6 +164,34 @@ Partial Class formUtama
         Me.btnTentang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnTentang.UseVisualStyleBackColor = True
         '
+        'TableLayoutPanel14
+        '
+        Me.TableLayoutPanel14.ColumnCount = 1
+        Me.TableLayoutPanel14.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel14.Controls.Add(Me.lblNamaParkiran, 0, 1)
+        Me.TableLayoutPanel14.Controls.Add(Me.PictureBox2, 0, 0)
+        Me.TableLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel14.Location = New System.Drawing.Point(3, 3)
+        Me.TableLayoutPanel14.Name = "TableLayoutPanel14"
+        Me.TableLayoutPanel14.RowCount = 2
+        Me.TableLayoutPanel14.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel14.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel14.Size = New System.Drawing.Size(194, 144)
+        Me.TableLayoutPanel14.TabIndex = 4
+        '
+        'lblNamaParkiran
+        '
+        Me.lblNamaParkiran.AutoSize = True
+        Me.lblNamaParkiran.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lblNamaParkiran.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNamaParkiran.ForeColor = System.Drawing.SystemColors.Control
+        Me.lblNamaParkiran.Location = New System.Drawing.Point(0, 72)
+        Me.lblNamaParkiran.Margin = New System.Windows.Forms.Padding(0, 0, 3, 0)
+        Me.lblNamaParkiran.Name = "lblNamaParkiran"
+        Me.lblNamaParkiran.Size = New System.Drawing.Size(191, 72)
+        Me.lblNamaParkiran.TabIndex = 2
+        Me.lblNamaParkiran.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
         'PictureBox2
         '
         Me.PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Bottom
@@ -258,6 +202,53 @@ Partial Class formUtama
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.PictureBox2.TabIndex = 3
         Me.PictureBox2.TabStop = False
+        '
+        'TableLayoutPanel3
+        '
+        Me.TableLayoutPanel3.BackColor = System.Drawing.SystemColors.Control
+        Me.TableLayoutPanel3.ColumnCount = 1
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel3.Controls.Add(Me.TableLayoutPanel4, 0, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.panelUtama, 0, 1)
+        Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(200, 0)
+        Me.TableLayoutPanel3.Margin = New System.Windows.Forms.Padding(0)
+        Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
+        Me.TableLayoutPanel3.RowCount = 2
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(980, 624)
+        Me.TableLayoutPanel3.TabIndex = 2
+        '
+        'TableLayoutPanel4
+        '
+        Me.TableLayoutPanel4.BackColor = System.Drawing.SystemColors.Control
+        Me.TableLayoutPanel4.ColumnCount = 3
+        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150.0!))
+        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50.0!))
+        Me.TableLayoutPanel4.Controls.Add(Me.lblNamaUser, 1, 0)
+        Me.TableLayoutPanel4.Controls.Add(Me.btnLogout, 2, 0)
+        Me.TableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel4.Location = New System.Drawing.Point(20, 10)
+        Me.TableLayoutPanel4.Margin = New System.Windows.Forms.Padding(20, 10, 20, 0)
+        Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
+        Me.TableLayoutPanel4.RowCount = 1
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel4.Size = New System.Drawing.Size(940, 40)
+        Me.TableLayoutPanel4.TabIndex = 1
+        '
+        'lblNamaUser
+        '
+        Me.lblNamaUser.AutoSize = True
+        Me.lblNamaUser.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lblNamaUser.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.lblNamaUser.Location = New System.Drawing.Point(743, 0)
+        Me.lblNamaUser.Name = "lblNamaUser"
+        Me.lblNamaUser.Size = New System.Drawing.Size(144, 40)
+        Me.lblNamaUser.TabIndex = 1
+        Me.lblNamaUser.Text = "Nama User"
+        Me.lblNamaUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'btnLogout
         '
@@ -273,6 +264,14 @@ Partial Class formUtama
         Me.btnLogout.TabIndex = 2
         Me.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.btnLogout.UseVisualStyleBackColor = False
+        '
+        'panelUtama
+        '
+        Me.panelUtama.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.panelUtama.Location = New System.Drawing.Point(3, 53)
+        Me.panelUtama.Name = "panelUtama"
+        Me.panelUtama.Size = New System.Drawing.Size(974, 568)
+        Me.panelUtama.TabIndex = 2
         '
         'formUtama
         '
@@ -290,10 +289,10 @@ Partial Class formUtama
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.TableLayoutPanel14.ResumeLayout(False)
         Me.TableLayoutPanel14.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel3.ResumeLayout(False)
         Me.TableLayoutPanel4.ResumeLayout(False)
         Me.TableLayoutPanel4.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
