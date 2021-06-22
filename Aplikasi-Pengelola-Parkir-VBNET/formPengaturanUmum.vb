@@ -18,6 +18,7 @@ Public Class formPengaturanUmum
         str = "update tabelPengaturanUmum set nama_parkiran = '" & txtNamaParkiran.Text & "', nama_pemilik = '" & txtNamaPemilik.Text & "', alamat_parkiran = '" & txtAlamatParkiran.Text & "', no_telp_parkiran = '" & txtNoTelpParkiran.Text & "' where id_pengaturan = '" & "1" & "'"
         cmd = New OdbcCommand(str, conn)
         cmd.ExecuteNonQuery()
+        formUtama.loadNamaParkiran()
         MessageBox.Show("Data Tersimpan!")
     End Sub
 
