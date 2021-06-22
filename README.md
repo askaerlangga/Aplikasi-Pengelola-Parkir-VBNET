@@ -1,2 +1,2 @@
 # Aplikasi-Pengelola-Parkir-VBNET
-PBO 4
+Aplikasi Pengelola Parkir menggunakan VB.NET dan MySQL
