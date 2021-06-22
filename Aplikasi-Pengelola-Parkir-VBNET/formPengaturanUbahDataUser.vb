@@ -1,4 +1,4 @@
-﻿Imports System.Data.OleDb
+﻿Imports System.Data.Odbc
 
 Public Class formPengaturanUbahDataUser
 
@@ -17,7 +17,7 @@ Public Class formPengaturanUbahDataUser
     Private Sub btnSimpan_Click(sender As Object, e As EventArgs) Handles btnSimpan.Click
         koneksi()
         str = "update tabelPegawai set username_user = '" & txtUsername.Text & "', password_user = '" & txtPassword.Text & "', nama_pegawai = '" & txtNamaUser.Text & "', alamat_pegawai = '" & txtAlamat.Text & "', no_telp_pegawai = '" & txtNoTelepon.Text & "', jabatan = '" & cmbJabatan.Text & "', jenis_user = '" & cmbJenisAkun.Text & "' where id_pegawai = '" & txtIdUser.Text & "'"
-        cmd = New OleDbCommand(str, conn)
+        cmd = New OdbcCommand(str, conn)
         cmd.ExecuteNonQuery()
         MessageBox.Show("Data Tersimpan!")
         hapusForm()
@@ -29,7 +29,7 @@ Public Class formPengaturanUbahDataUser
             MessageBox.Show("Form Tidak boleh Kosong!")
         Else
             koneksi()
-            cmd = New OleDb.OleDbCommand("select * from tabelPegawai where id_pegawai ='" & txtIdUser.Text & "'", conn)
+            cmd = New OdbcCommand("select * from tabelPegawai where id_pegawai ='" & txtIdUser.Text & "'", conn)
             dr = cmd.ExecuteReader
             dr.Read()
             If dr.HasRows Then

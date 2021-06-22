@@ -1,10 +1,10 @@
-﻿Imports System.Data.OleDb
+﻿Imports System.Data.Odbc
 
 Public Class formBeranda
 
     Sub loadDashboard()
         koneksi()
-        cmd = New OleDbCommand("Select * from tabelTransaksi where no_tiket in (select max(no_tiket) from tabelTransaksi)", conn)
+        cmd = New OdbcCommand("Select * from tabelTransaksi where no_tiket in (select max(no_tiket) from tabelTransaksi)", conn)
         dr = cmd.ExecuteReader
         dr.Read()
         If Not dr.HasRows Then
@@ -21,7 +21,7 @@ Public Class formBeranda
 
     Sub loadKendaraanTerparkir()
         koneksi()
-        da = New OleDbDataAdapter("select no_tiket, no_kendaraan, jenis_kendaraan, jam_masuk from tabelTransaksi where keterangan = '" & "TERPARKIR" & "'", conn)
+        da = New OdbcDataAdapter("select no_tiket, no_kendaraan, jenis_kendaraan, jam_masuk from tabelTransaksi where keterangan = '" & "TERPARKIR" & "'", conn)
         ds = New DataSet
         da.Fill(ds)
         dtgKendaraanTerparkir.DataSource = ds.Tables(0)
@@ -42,7 +42,7 @@ Public Class formBeranda
         Dim cc As String
         koneksi()
         cc = "select count(*) from tabelTransaksi where jenis_kendaraan = '" & "MOTOR" & "' and keterangan = '" & "TERPARKIR" & "'"
-        cmd = New OleDb.OleDbCommand(cc, conn)
+        cmd = New OdbcCommand(cc, conn)
         Dim rs As Integer
         rs = cmd.ExecuteScalar
         lblMotorTerparkir.Text = rs
@@ -52,7 +52,7 @@ Public Class formBeranda
         Dim cc As String
         koneksi()
         cc = "select count(*) from tabelTransaksi where jenis_kendaraan = '" & "MOBIL" & "' and keterangan = '" & "TERPARKIR" & "'"
-        cmd = New OleDb.OleDbCommand(cc, conn)
+        cmd = New OdbcCommand(cc, conn)
         Dim rs As Integer
         rs = cmd.ExecuteScalar
         lblMobilTerparkir.Text = rs
@@ -64,7 +64,7 @@ Public Class formBeranda
         tanggal = DateTime.Now.ToShortDateString
         koneksi()
         cc = "select count(*) from tabelTransaksi"
-        cmd = New OleDb.OleDbCommand(cc, conn)
+        cmd = New OdbcCommand(cc, conn)
         Dim rs As Integer
         rs = cmd.ExecuteScalar
         lblTotalKunjungan.Text = rs
@@ -74,7 +74,7 @@ Public Class formBeranda
         koneksi()
         Dim cc As String
         cc = "Select sum(total_biaya) from tabelTransaksi"
-        cmd = New OleDbCommand(cc, conn)
+        cmd = New OdbcCommand(cc, conn)
         Dim rs As Integer
         rs = cmd.ExecuteScalar
         lblPendapatan.Text = "Rp" + Convert.ToString(rs)
@@ -89,7 +89,7 @@ Public Class formBeranda
             loadKendaraanTerparkir()
         Else
             koneksi()
-            da = New OleDbDataAdapter("select no_tiket, no_kendaraan, jenis_kendaraan, jam_masuk from tabelTransaksi where no_tiket = '" & txtNoTiket.Text & "' and keterangan = '" & "TERPARKIR" & "'", conn)
+            da = New OdbcDataAdapter("select no_tiket, no_kendaraan, jenis_kendaraan, jam_masuk from tabelTransaksi where no_tiket = '" & txtNoTiket.Text & "' and keterangan = '" & "TERPARKIR" & "'", conn)
             ds = New DataSet
             da.Fill(ds)
             dtgKendaraanTerparkir.DataSource = ds.Tables(0)

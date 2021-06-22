@@ -1,4 +1,4 @@
-﻿Imports System.Data.OleDb
+﻿Imports System.Data.Odbc
 
 Public Class formTransaksiParkirMasuk
 
@@ -7,7 +7,7 @@ Public Class formTransaksiParkirMasuk
         Dim urutan As String
         Dim hitung As Long
         koneksi()
-        cmd = New OleDbCommand("Select * from tabelTransaksi where no_tiket in (select max(no_tiket) from tabelTransaksi)", conn)
+        cmd = New OdbcCommand("Select * from tabelTransaksi where no_tiket in (select max(no_tiket) from tabelTransaksi)", conn)
         dr = cmd.ExecuteReader
         dr.Read()
         If Not dr.HasRows Then
@@ -35,7 +35,7 @@ Public Class formTransaksiParkirMasuk
         Dim totalBiaya As Integer = 0
         Dim jamKeluar As String = ""
         koneksi()
-        cmd = New OleDbCommand("insert into tabelTransaksi values ('" & txtNoTiket.Text & "','" &
+        cmd = New OdbcCommand("insert into tabelTransaksi values ('" & txtNoTiket.Text & "','" &
                                txtNoKendaraan.Text & "','" & cmbJenisKendaraan.Text & "','" & txtTanggal.Text & "','" &
                                txtJamMasuk.Text & "','" & jamKeluar & "','" & txtTarifAwal.Text & "','" & totalBiaya &
                                "','" & txtNamaOperator.Text & "','" & keterangan & "')", conn)
@@ -58,7 +58,7 @@ Public Class formTransaksiParkirMasuk
             txtTarifAwal.Text = ""
         Else
             koneksi()
-            cmd = New OleDbCommand("Select * from tabelTarifKendaraan where id_tarif_kendaraan = '" & cmbJenisKendaraan.SelectedIndex & "'", conn)
+            cmd = New OdbcCommand("Select * from tabelTarifKendaraan where id_tarif_kendaraan = '" & cmbJenisKendaraan.SelectedIndex & "'", conn)
             dr = cmd.ExecuteReader
             dr.Read()
             txtTarifAwal.Text = dr("tarif_kendaraan_awal").ToString

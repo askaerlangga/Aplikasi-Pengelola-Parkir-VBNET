@@ -1,17 +1,22 @@
-﻿Imports System.Data.OleDb
+﻿Imports System.Data.Odbc
 
 Module modulKoneksi
-    Public conn As OleDbConnection
-    Public cmd As OleDbCommand
-    Public da As OleDbDataAdapter
-    Public dr As OleDbDataReader
+    Public conn As OdbcConnection
+    Public cmd As OdbcCommand
+    Public da As OdbcDataAdapter
+    Public dr As OdbcDataReader
     Public ds As DataSet
     Public dt As New DataTable
     Public str As String
     Public x As Integer
 
     Sub koneksi()
-        conn = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;data source=database.accdb")
-        conn.Open()
+        conn = New OdbcConnection("Dsn=AplikasiPengelolaParkir")
+        If conn.State = ConnectionState.Closed Then
+            conn.Open()
+        Else
+            MessageBox.Show("Koneksi Gagal")
+        End If
+
     End Sub
 End Module

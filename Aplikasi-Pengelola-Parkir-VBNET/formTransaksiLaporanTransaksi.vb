@@ -1,10 +1,10 @@
-﻿Imports System.Data.OleDb
+﻿Imports System.Data.Odbc
 
 Public Class formTransaksiLaporanTransaksi
 
     Sub loadLaporanTransaksi()
         koneksi()
-        da = New OleDbDataAdapter("select no_tiket, no_kendaraan, jenis_kendaraan, tanggal_transaksi, jam_masuk, jam_keluar,tarif_kendaraan,total_biaya,nama_operator from tabelTransaksi where keterangan = '" & "KELUAR" & "'", conn)
+        da = New OdbcDataAdapter("select no_tiket, no_kendaraan, jenis_kendaraan, tanggal_transaksi, jam_masuk, jam_keluar,tarif_kendaraan,total_biaya,nama_operator from tabelTransaksi where keterangan = '" & "KELUAR" & "'", conn)
         ds = New DataSet
         da.Fill(ds)
         dtgLaporanTransaksi.DataSource = ds.Tables(0)

@@ -1,4 +1,4 @@
-﻿Imports System.Data.OleDb
+﻿Imports System.Data.Odbc
 
 Public Class formPengaturanTambahUser
 
@@ -7,7 +7,7 @@ Public Class formPengaturanTambahUser
         Dim urutan As String
         Dim hitung As Long
         koneksi()
-        cmd = New OleDbCommand("Select * from tabelPegawai where id_pegawai in (select max(id_pegawai) from tabelPegawai)", conn)
+        cmd = New OdbcCommand("Select * from tabelPegawai where id_pegawai in (select max(id_pegawai) from tabelPegawai)", conn)
         dr = cmd.ExecuteReader
         dr.Read()
         If Not dr.HasRows Then
@@ -32,7 +32,7 @@ Public Class formPengaturanTambahUser
 
     Private Sub btnSimpan_Click(sender As Object, e As EventArgs) Handles btnSimpan.Click
         koneksi()
-        cmd = New OleDbCommand("insert into tabelPegawai values ('" & txtIdUser.Text & "','" &
+        cmd = New OdbcCommand("insert into tabelPegawai values ('" & txtIdUser.Text & "','" &
                                txtUsername.Text & "','" & txtPassword.Text & "','" & txtNamaUser.Text & "','" & txtAlamat.Text & "','" &
                                txtNoTelepon.Text & "','" & cmbJabatan.Text & "','" & cmbJenisAkun.Text & "')", conn)
         cmd.ExecuteNonQuery()

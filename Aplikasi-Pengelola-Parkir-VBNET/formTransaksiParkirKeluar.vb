@@ -1,4 +1,4 @@
-﻿Imports System.Data.OleDb
+﻿Imports System.Data.Odbc
 
 Public Class formTransaksiParkirKeluar
     Dim jamMasuk, jamKeluar, tarifAwal, tarifPerJam, totalBiaya As String
@@ -6,7 +6,7 @@ Public Class formTransaksiParkirKeluar
     Private Sub btnProses_Click(sender As Object, e As EventArgs) Handles btnProses.Click
         Dim keterangan As String = "KELUAR"
         str = "update tabelTransaksi set jam_keluar = '" & jamKeluar & "', total_biaya = '" & Convert.ToInt32(totalBiaya) & "', keterangan = '" & keterangan & "' where no_tiket = '" & txtNoTiket.Text & "'"
-        cmd = New OleDbCommand(str, conn)
+        cmd = New OdbcCommand(str, conn)
         cmd.ExecuteNonQuery()
         MessageBox.Show("Tersimpan")
         hapusForm()
@@ -28,7 +28,7 @@ Public Class formTransaksiParkirKeluar
 
     Sub tampilTarifPerjam()
         koneksi()
-        cmd = New OleDb.OleDbCommand("select * from tabelTarifKendaraan where jenis_kendaraan ='" & txtJenisKendaraan.Text & "'", conn)
+        cmd = New OdbcCommand("select * from tabelTarifKendaraan where jenis_kendaraan ='" & txtJenisKendaraan.Text & "'", conn)
         dr = cmd.ExecuteReader
         dr.Read()
         tarifPerJam = dr("tarif_kendaraan_perjam")
@@ -42,7 +42,7 @@ Public Class formTransaksiParkirKeluar
             Dim keterangan As String = "TERPARKIR"
             Dim tanggalTransaksi, namaOperator As String
             koneksi()
-            cmd = New OleDb.OleDbCommand("select * from tabelTransaksi where no_tiket ='" & txtNoTiket.Text & "' and keterangan = '" & keterangan & "'", conn)
+            cmd = New OdbcCommand("select * from tabelTransaksi where no_tiket ='" & txtNoTiket.Text & "' and keterangan = '" & keterangan & "'", conn)
             dr = cmd.ExecuteReader
             dr.Read()
             If dr.HasRows Then

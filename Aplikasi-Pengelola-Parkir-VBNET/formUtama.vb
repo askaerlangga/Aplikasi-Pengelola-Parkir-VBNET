@@ -1,4 +1,4 @@
-﻿Imports System.Data.OleDb
+﻿Imports System.Data.Odbc
 
 Public Class formUtama
     Sub konfirmasiLogout()
@@ -13,14 +13,14 @@ Public Class formUtama
 
     Sub loadNamaParkiran()
         koneksi()
-        cmd = New OleDb.OleDbCommand("select * from tabelPengaturanUmum where id_pengaturan = '" & "0" & "'", conn)
+        cmd = New OdbcCommand("select * from tabelPengaturanUmum where id_pengaturan = '" & "0" & "'", conn)
         dr = cmd.ExecuteReader
         dr.Read()
         lblNamaParkiran.Text = dr("nama_parkiran")
     End Sub
 
     Private Sub btnPengaturan_Click(sender As Object, e As EventArgs) Handles btnPengaturan.Click
-        cmd = New OleDb.OleDbCommand("select * from tabelPegawai where nama_pegawai = '" & lblNamaUser.Text & "'", conn)
+        cmd = New OdbcCommand("select * from tabelPegawai where nama_pegawai = '" & lblNamaUser.Text & "'", conn)
         dr = cmd.ExecuteReader
         dr.Read()
         If (dr("jenis_user") = "admin") Then
