@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4DD9EA3C-8842-4D85-940A-4A760C041007}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Aplikasi_Pengelola_Parkir_VBNET.My.MyApplication</StartupObject>
+    <RootNamespace>Aplikasi_Pengelola_Parkir_VBNET</RootNamespace>
+    <AssemblyName>Aplikasi-Pengelola-Parkir-VBNET</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Aplikasi-Pengelola-Parkir-VBNET.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Aplikasi-Pengelola-Parkir-VBNET.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="formBeranda.Designer.vb">
+      <DependentUpon>formBeranda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formBeranda.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formPengaturan.Designer.vb">
+      <DependentUpon>formPengaturan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formPengaturan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formPengaturanTarifKendaraan.Designer.vb">
+      <DependentUpon>formPengaturanTarifKendaraan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formPengaturanTarifKendaraan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formPengaturanUbahDataUser.Designer.vb">
+      <DependentUpon>formPengaturanUbahDataUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formPengaturanUbahDataUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formPengaturanUmum.Designer.vb">
+      <DependentUpon>formPengaturanUmum.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formPengaturanUmum.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formPengaturanTambahUser.Designer.vb">
+      <DependentUpon>formPengaturanTambahUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formPengaturanTambahUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formTentang.Designer.vb">
+      <DependentUpon>formTentang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formTentang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formTransaksi.Designer.vb">
+      <DependentUpon>formTransaksi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formTransaksi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formTransaksiLaporanTransaksi.Designer.vb">
+      <DependentUpon>formTransaksiLaporanTransaksi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formTransaksiLaporanTransaksi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formTransaksiParkirKeluar.Designer.vb">
+      <DependentUpon>formTransaksiParkirKeluar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formTransaksiParkirKeluar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formTransaksiParkirMasuk.Designer.vb">
+      <DependentUpon>formTransaksiParkirMasuk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formTransaksiParkirMasuk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formUtama.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formUtama.Designer.vb">
+      <DependentUpon>formUtama.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formLogin.Designer.vb">
+      <DependentUpon>formLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modulKoneksi.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="formBeranda.resx">
+      <DependentUpon>formBeranda.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formPengaturan.resx">
+      <DependentUpon>formPengaturan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formPengaturanTarifKendaraan.resx">
+      <DependentUpon>formPengaturanTarifKendaraan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formPengaturanUbahDataUser.resx">
+      <DependentUpon>formPengaturanUbahDataUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formPengaturanUmum.resx">
+      <DependentUpon>formPengaturanUmum.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formPengaturanTambahUser.resx">
+      <DependentUpon>formPengaturanTambahUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formTentang.resx">
+      <DependentUpon>formTentang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formTransaksi.resx">
+      <DependentUpon>formTransaksi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formTransaksiLaporanTransaksi.resx">
+      <DependentUpon>formTransaksiLaporanTransaksi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formTransaksiParkirKeluar.resx">
+      <DependentUpon>formTransaksiParkirKeluar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formTransaksiParkirMasuk.resx">
+      <DependentUpon>formTransaksiParkirMasuk.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formUtama.resx">
+      <DependentUpon>formUtama.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formLogin.resx">
+      <DependentUpon>formLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconMakanan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconLogout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconBeranda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconKasir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconPengaturan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconTentang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconPassword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconUser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alphard.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconChart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconExcel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconMobil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconMotor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconParkir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconStruk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconUang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconMasuk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profil.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
